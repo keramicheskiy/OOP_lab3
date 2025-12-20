@@ -1,5 +1,0 @@
-add_test([=[PolyTest.Center]=]  /home/keramicheskiy/development/University/oop/lab_3/build/tests [==[--gtest_filter=PolyTest.Center]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[PolyTest.Center]=]  PROPERTIES WORKING_DIRECTORY /home/keramicheskiy/development/University/oop/lab_3/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[PolyTest.Area]=]  /home/keramicheskiy/development/University/oop/lab_3/build/tests [==[--gtest_filter=PolyTest.Area]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[PolyTest.Area]=]  PROPERTIES WORKING_DIRECTORY /home/keramicheskiy/development/University/oop/lab_3/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  tests_TESTS PolyTest.Center PolyTest.Area)

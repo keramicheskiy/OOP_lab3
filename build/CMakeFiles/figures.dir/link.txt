@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfigures.a CMakeFiles/figures.dir/source/figure.cpp.o CMakeFiles/figures.dir/source/point.cpp.o CMakeFiles/figures.dir/source/rectangle.cpp.o CMakeFiles/figures.dir/source/rhombus.cpp.o CMakeFiles/figures.dir/source/trapezoid.cpp.o CMakeFiles/figures.dir/source/figurearray.cpp.o CMakeFiles/figures.dir/source/pointarray.cpp.o CMakeFiles/figures.dir/source/pointpairarray.cpp.o
+/usr/bin/ranlib libfigures.a

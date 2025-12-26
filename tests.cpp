@@ -12,15 +12,18 @@ TEST(PolyTest, Center) {
     
     double epsilon = 1e-3;
 
-    EXPECT_TRUE(2 - epsilon <= rectangle->getCenter().x && rectangle->getCenter().x <= 2 + epsilon 
-             && 1 - epsilon <= rectangle->getCenter().y && rectangle->getCenter().y <= 1 + epsilon);
-    EXPECT_TRUE(0.55 - epsilon <= trapezoid->getCenter().x && trapezoid->getCenter().x <= 0.55 + epsilon
-                && 1 - epsilon <= trapezoid->getCenter().y && trapezoid->getCenter().y <= 1 + epsilon);
-    EXPECT_TRUE(2 - epsilon <= rhombus->getCenter().x && rhombus->getCenter().x <= 2 + epsilon
-             && 3 - epsilon <= rhombus->getCenter().y && rhombus->getCenter().y <= 3 + epsilon);
-    EXPECT_TRUE(1.73333 - epsilon <= triangle->getCenter().x && triangle->getCenter().x <= 1.73333 + epsilon
-                 && 1.6 - epsilon <= triangle->getCenter().y && triangle->getCenter().y <= 1.6 + epsilon);
-    
+    EXPECT_NEAR(rectangle->getCenter().x, 2, epsilon);
+    EXPECT_NEAR(rectangle->getCenter().y, 1, epsilon);
+
+    EXPECT_NEAR(trapezoid->getCenter().x, 0.55, epsilon);
+    EXPECT_NEAR(trapezoid->getCenter().y, 1, epsilon);
+
+    EXPECT_NEAR(rhombus->getCenter().x, 2, epsilon);
+    EXPECT_NEAR(rhombus->getCenter().y, 3, epsilon);
+
+    EXPECT_NEAR(triangle->getCenter().x, 1.73333, epsilon);
+    EXPECT_NEAR(triangle->getCenter().y, 1.6, epsilon);
+
     delete rectangle, trapezoid, rhombus, triangle;
 }
 
@@ -33,10 +36,10 @@ TEST(PolyTest, Area) {
     
     double epsilon = 1e-3;
 
-    EXPECT_TRUE(8 - epsilon <= rectangle->getArea() && rectangle->getArea() <= 8 + epsilon);
-    EXPECT_TRUE(3.9 - epsilon <= trapezoid->getArea() && trapezoid->getArea() <= 3.9 + epsilon);
-    EXPECT_TRUE(4 - epsilon <= rhombus->getArea() && rhombus->getArea() <= 4 + epsilon);
-    EXPECT_TRUE(1.34667 - epsilon <= triangle->getArea() && triangle->getArea() <= 1.34667 + epsilon);
+    EXPECT_NEAR(rectangle->getArea(), 8, epsilon);
+    EXPECT_NEAR(trapezoid->getArea(), 3.9, epsilon);
+    EXPECT_NEAR(rhombus->getArea(), 4, epsilon);
+    EXPECT_NEAR(triangle->getArea(), 1.34667, epsilon);
 
     delete rectangle, trapezoid, rhombus, triangle;
 }
